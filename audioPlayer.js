@@ -11,7 +11,7 @@ function audioPlayer(){
          $(this).parent().addClass("current-song");
     });
     $("#audioPlayer")[0].addEventListener("ended", function(){
-        currentSong = Math.floor(Math.random()*$("#playlist li a").length);
+        currentSong++;
         $("#playlist li").removeClass("current-song");  
         $("#playlist li:eq("+currentSong+")").addClass("current-song");
         $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
