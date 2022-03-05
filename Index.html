@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <ul class="nav">
+        <audio id = "beep" preload="auto">
+            <source scr="effect01.mp3">
+        </audio>
+        <audio id = "SPT" preload="auto">
+            <source src="sound01.mp3">
+        </audio>
+        <audio id = "LF01" preload="auto">
+            <source src="sound.mp3">
+        </audio>
+    </ul>
+    <style>
+        #playlist{
+            list-style: none;
+        }
+        #playlist li a{
+            color:black;
+            text-decoration: none;
+        }
+        #playlist .current-song a{
+            color:blue;
+        }
+        @keyframes spin{
+            from { transform: rotateZ(0deg); }
+            to { transform : rotateZ(360deg) }
+        }
+        .spinning{
+            animation: spin 150s infinite;
+        }
+    </style>
+    <head>
+        <audio scr="" id="audioPlayer">404 ;-;</audio>
+        <meta charset="utf-8">
+        <title>Radio Beta 0.83v</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="video.css">
+    </head>
+    <body>
+        <ul id="playlist">
+            <li class="current-song"><a href="music/music01.mp3">1</a></li>
+            <li class="current-song"><a href="music/music02.mp3">1</a></li>
+            <li class="current-song"><a href="music/music03.mp3">1</a></li>
+            <li class="current-song"><a href="music/music04.mp3">1</a></li>
+            <li class="current-song"><a href="music/music05.mp3">1</a></li>
+            <li class="current-song"><a href="music/music06.mp3">1</a></li>
+            <li class="current-song"><a href="music/music07.mp3">1</a></li>
+            <li class="current-song"><a href="music/music08.mp3">1</a></li>
+            <li class="current-song"><a href="music/music09.mp3">1</a></li>
+            <li class="current-song"><a href="music/music010.mp3">1</a></li>
+            <li class="current-song"><a href="music/music011.mp3">1</a></li>
+            <li class="current-song"><a href="music/music012.mp3">1</a></li>
+            <li class="current-song"><a href="music/music013.mp3">1</a></li>
+            <li class="current-song"><a href="music/music014.mp3">1</a></li>
+            <li class="current-song"><a href="music/music015.mp3">1</a></li>
+            <li class="current-song"><a href="music/music016.mp3">1</a></li>
+            <li class="current-song"><a href="music/music017.mp3">1</a></li>
+            <li class="current-song"><a href="music/music018.mp3">1</a></li>
+            <li class="current-song"><a href="music/music019.mp3">1</a></li>
+            <li class="current-song"><a href="music/music020.mp3">1</a></li>
+            <li class="current-song"><a href="music/music021.mp3">1</a></li>
+            <li class="current-song"><a href="music/music022.mp3">1</a></li>
+            <li class="current-song"><a href="music/music023.mp3">1</a></li>
+            <li class="current-song"><a href="music/music024.mp3">1</a></li>
+            <li class="current-song"><a href="music/music025.mp3">1</a></li>
+            <li class="current-song"><a href="music/music026.mp3">1</a></li>
+            <li class="current-song"><a href="music/music027.mp3">1</a></li>
+            <li class="current-song"><a href="music/music028.mp3">1</a></li>
+            <li class="current-song"><a href="music/music029.mp3">1</a></li>
+            <li class="current-song"><a href="music/music030.mp3">1</a></li>
+        </ul>
+        <script src = "https://code.jquery.com/jquery-2.0.0.js"></script>
+        <script src = "audioPlayer.js"></script>
+        <script>audioPlayer()</script>
+        <section>
+            <video src="background.mp4" autoplay muted loop></video>
+        <div class="sphere">
+            <img src="github.gif" autoplay class = "spinning"></img>
+        </div>
+        </section>
+    </body>
+</html>
