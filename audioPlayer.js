@@ -2,8 +2,8 @@ function getRandomNum (min, max) {
     return Math.floor (Math.random () * (max - min + 1) + min)
 }
 function audioPlayer(){
-    var currentSong = 0, a;
-    $("#audioPlayer")[0].src = $("#playlist li a")[0];
+    var a, currentSong = 0;
+    $("#audioPlayer")[0].src = $("#playlist li a")[getRandomNum(0, 29)];
     $("#audioPlayer")[0].play();
     $("#playlist li a").click(function(e){        
         e.preventDefault();
