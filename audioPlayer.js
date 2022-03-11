@@ -1,9 +1,17 @@
+var SHP = 0, sv = 33, vsong = new Array (sv);
+function resetsong(){
+    for ( let index = 0; index < sv; index++ )
+        vsong[index] = false;
+    return;
+}
+resetsong();
 function getRandomNum (min, max) {
     return Math.floor (Math.random () * (max - min + 1) + min)
 }
 function audioPlayer(){
-    var a, currentSong = 0;
-    $("#audioPlayer")[0].src = $("#playlist li a")[getRandomNum(0, 29)];
+    var a = getRandomNum(0, sv), currentSong = 0;
+    SHP++; vsong[a] = true;
+    $("#audioPlayer")[0].src = $("#playlist li a")[a];
     $("#audioPlayer")[0].play();
     $("#playlist li a").click(function(e){        
         e.preventDefault();
@@ -14,11 +22,16 @@ function audioPlayer(){
          $(this).parent().addClass("current-song");
     });
     $("#audioPlayer")[0].addEventListener("ended", function(){
-        a = getRandomNum(1, 29);
-        if ( currentSong != a )
-            currentSong = a;
-        else 
-            currentSong++;
+        a = getRandomNum(0, sv);
+        SHP++;
+        while ( vsong[a] )
+            a = getRandomNum(0, sv);
+        currentSong = a;
+        if ( SHP == sv ){
+            resetsong();
+            SHP = 1;
+        }
+        vsong[a] = true;
         $("#playlist li").removeClass("current-song");  
         $("#playlist li:eq("+currentSong+")").addClass("current-song");
         $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
