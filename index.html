@@ -12,15 +12,8 @@
         </audio>
     </ul>
     <style>
-        #playlist{
-            list-style: none;
-        }
-        #playlist li a{
-            color:black;
-            text-decoration: none;
-        }
-        #playlist .current-song a{
-            color:blue;
+        .layer{
+            z-index: 13;
         }
         @keyframes spin{
             from { transform: rotateZ(0deg); }
@@ -31,7 +24,7 @@
         }
     </style>
     <head>
-        <audio scr="" id="audioPlayer">404 ;-;</audio>
+        <audio scr="" controls id="audioPlayer" class="layer">404 ;-;</audio>
         <meta charset="utf-8">
         <title>Radio Beta 0.83v</title>
         <link rel="stylesheet" href="style.css">
@@ -69,12 +62,16 @@
             <li class="current-song"><a href="music/music28.mp3"></a></li>
             <li class="current-song"><a href="music/music29.mp3"></a></li>
             <li class="current-song"><a href="music/music30.mp3"></a></li>
+            <li class="current-song"><a href="music/music31.mp3"></a></li>
+            <li class="current-song"><a href="music/music32.mp3"></a></li>
+            <li class="current-song"><a href="music/music33.mp3"></a></li>
+            <li class="current-song"><a href="music/music34.mp3"></a></li>
         </ul>
         <section>
             <img src="background.jpeg"></img>
-        <div class="sphere">
-            <img src="github.gif" class = "spinning"></img>
-        </div>
+            <div class="sphere">
+                <img src="github.gif" class = "spinning"></img>
+            </div>
         </section>
         <script src = "plugin.js"></script>
         <script src = "audioPlayer.js"></script>
